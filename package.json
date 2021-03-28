@@ -1,0 +1,20 @@
+{
+  "name": "checkbox-slider-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:css": "node-sass -rw style.scss style.css -w",
+    "watch:js": "parcel watch ./index.js --out-dir ./ --out-file bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "node-sass": "^4.13.1",
+    "parcel": "^1.12.4"
+  }
+}

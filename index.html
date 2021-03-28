@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="outer-container">
+        <div class="checkboxes-container">
+          <label for="toggle-1" class="checkbox-container">
+            <input type="checkbox" id="toggle-1" class="toggle"></input>
+            <span class="checkmark"></span>
+            <span class="label-text">check me</span>
+          </label>
+      
+          <label for="toggle-2" class="checkbox-container">
+            <input type="checkbox" id="toggle-2" class="toggle"></input>
+            <span class="checkmark"></span>
+            <span class="label-text">or check me</span>
+          </label>
+      
+          <label for="toggle-3" class="checkbox-container">
+            <input type="checkbox" id="toggle-3" class="toggle"></input>
+            <span class="checkmark"></span>
+            <span class="label-text">how about me?</span>
+          </label>
+        </div>
+      </div>
+      
+      <div id="controls" class="controls">
+        <h3>Customize the Toggles</h3>
+        <div id="toggle-width" class="toggle-value">
+          <label for="toggle-width__value"> Toggle Width: 
+            <input id="toggle-width__value" type="number" value="50" >
+          </label>
+        </div>
+        <div id="toggle-height" class="toggle-value">
+          <label for="toggle-height__value"> Toggle Height: 
+            <input id="toggle-height__value" type="number" value="25" >
+          </label>
+        </div>
+        <div id="toggle-padding" class="toggle-value">
+          <label for="toggle-padding__value"> Toggle Padding: 
+            <input id="toggle-padding__value" type="number" value="4" >
+          </label>
+        </div>
+        <div id="toggle-inactive-color" class="toggle-value">
+          <label for="toggle-inactive-color__value"> Inactive Color: 
+            <input id="toggle-inactive-color__value" type="text" value="lightgray" >
+          </label>
+        </div>
+        <div id="toggle-inactive-hover-color" class="toggle-value">
+          <label for="toggle-inactive-hover-color__value"> Inactive Hover Color: 
+            <input id="toggle-inactive-hover-color__value" type="text" value="darkgray" >
+          </label>
+        </div>
+        <div id="toggle-active-color" class="toggle-value">
+          <label for="toggle-active-color__value"> Active Color: 
+            <input id="toggle-active-color__value" type="text" value="#2196F3" >
+          </label>
+        </div>
+          <div id="toggle-active-hover-color" class="toggle-value">
+          <label for="toggle-active-hover-color__value"> Active Hover Color: 
+            <input id="toggle-active-hover-color__value" type="text" value="#187bcc" >
+          </label>
+        </div>
+      </div>
+
+      <div class="get-component">
+        <button id="copy-html">Copy HTML</button>
+        <button id="copy-css">Copy CSS</button>
+        <button id="copy-sass">Copy SASS</button>
+      </div>
+    </div>
+    <input type="text" name="copytext" id="copytext">
+    <script src="bundle.js"></script>
+  </body>
+</html>

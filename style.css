@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo&display=swap");
+:root {
+  --inactive-color: lightgray;
+  --active-color: #2196f3;
+  --inactive-hover-color: darkgray;
+  --active-hover-color: #187bcc;
+  --toggle-width: 50px;
+  --toggle-height: 25px;
+  --toggle-padding: 4px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+  text-transform: lowercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: linear-gradient(-45deg, var(--active-color), var(--active-hover-color), var(--active-color)); }
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  /* The order of these two is important */ }
+  .checkbox-container:nth-last-child(1) {
+    padding-bottom: 0; }
+  .checkbox-container:hover input ~ .checkmark {
+    background: var(--inactive-hover-color); }
+  .checkbox-container input ~ .label-text {
+    color: var(--inactive-color);
+    transition: 0.3s; }
+  .checkbox-container input:hover ~ .label-text {
+    color: var(--inactive-hover-color); }
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--active-color); }
+  .checkbox-container input:checked:hover ~ .checkmark {
+    background: var(--active-hover-color); }
+  .checkbox-container input:checked ~ .checkmark:after {
+    margin-left: calc(var(--toggle-width) - var(--toggle-height)); }
+  .checkbox-container input:checked ~ .label-text {
+    color: var(--active-color); }
+  .checkbox-container input:checked:hover ~ .label-text {
+    color: var(--active-hover-color); }
+  .checkbox-container .checkmark {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    margin-right: 10px;
+    background: var(--inactive-color);
+    border-radius: 10000px;
+    padding: var(--toggle-padding);
+    transition: 0.3s;
+    box-sizing: border-box; }
+    .checkbox-container .checkmark:after {
+      content: '';
+      background: white;
+      display: block;
+      position: absolute;
+      height: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+      width: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+      border-radius: 100%;
+      transition: 0.3s; }
+  .checkbox-container .toggle {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+
+/* Checkboxes panel stylings */
+.checkboxes-container {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px; }
+
+/* Controls below this line */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  border: white 1px solid; }
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px; }
+
+.controls {
+  display: block;
+  background: white;
+  padding: 20px;
+  height: 100%;
+  text-align: right;
+  min-width: 340px;
+  flex: 1; }
+  .controls h3 {
+    text-transform: uppercase;
+    margin: 20px 0;
+    padding: 0;
+    color: var(--active-color); }
+  .controls input {
+    font-size: 20px;
+    color: var(--inactive-color);
+    width: 100px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px var(--active-color) solid;
+    outline: none; }
+    .controls input:focus {
+      color: var(--active-color); }
+
+.toggle-value {
+  margin-bottom: 10px; }
+
+.get-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  min-width: 200px;
+  flex: 1;
+  padding: 20px; }
+  .get-component button {
+    width: 100%;
+    height: 44px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.2s ease-in; }
+    .get-component button:hover {
+      opacity: 0.75; }
+
+#copytext {
+  position: fixed;
+  top: -100000px;
+  left: -100000px; }
